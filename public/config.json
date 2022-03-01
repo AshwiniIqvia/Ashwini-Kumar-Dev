@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://rahul-singh-del-1.herokuapp.com/execute",
+            "url": "https://ashwiniiqvia.herokuapp.com/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -30,9 +30,9 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "c7ff090c-6290-4e8a-a1ab-ccfeed95b4bb",  
+      "applicationExtensionKey": "6637d026-84c0-4c9b-9624-06655b0c312e",  
        "save": {
-           "url": "https://rahul-singh-del-1.herokuapp.com/save",
+           "url": "https://ashwiniiqvia.herokuapp.com/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://rahul-singh-del-1.herokuapp.com/publish",
+           "url": "https://ashwiniiqvia.herokuapp.com/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://rahul-singh-del-1.herokuapp.com/validate",
+           "url": "https://ashwiniiqvia.herokuapp.com/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://rahul-singh-del-1.herokuapp.com/stop",
+           "url": "https://ashwiniiqvia.herokuapp.com/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
