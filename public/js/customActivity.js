@@ -57,7 +57,9 @@ define([
                 if (key === 'studyId') {
                     $('#studyId').val(val);
                 }
-
+                if (key === 'contactId') {
+                    $('#contactId').val(val);
+                }
              
             })
         });
@@ -71,7 +73,7 @@ define([
     }
 
     
-    function onGetTokens (tokens) {
+   function onGetTokens (tokens) {
         // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
        // console.log("Tokens function: "+JSON.stringify(tokens));
         //authTokens = tokens;
@@ -88,18 +90,26 @@ define([
         //var ToNum = $('#ToNum').val();
         var studyId = $('#studyId').val();
         //var fromNumber = $('#fromNumber').val();
+        var contactId = $('#contactId').val();
         
-        //executeSql('INSERT INTO Test Custom Activity ("From Originating Number", "Study Id", "ToNumber") VALUES (?, ?, ?)', [fromNumber, studyId, ToNum]);
+        
        
         payload['arguments'].execute.inArguments = [{
-            "adhoc": adhoc,
-            "studyId": studyId,
-            "to": "{{Contact.Attribute.Test Custom Activity.TargetNumber}}" //<----This should map to your data extension name and phone number column
+            
+            "adhoc": {{Contact.Custom Activity.Test Active Data.AdhocText}},
+            "studyId": {{Contact.Custom Activity.Test Active Data.Clinical Trial Protocol ID}},
+            "contactId": {{Contact.Custom Activity.Test Active Data.Contact ID}}
+           // 'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"' + idField + '\"}}'
+
+            //"to": "{{Contact.Attribute.Test Custom Activity.TargetNumber}}" //<----This should map to your data extension name and phone number column
+            //"adhoc": adhoc,
+            //"studyId": studyId,
             
        
         }];
         
-       //  executeSql('Update Active Studies Outreach SET ( "AdhocText" ) VALUES ( ? )', { values: [ adhoc ] } WHERE ("Clinical Trial Protocol ID") = [studyId]);  
+       // executeSql('INSERT INTO Test Active Data ("Clinical Trial Protocol ID", "Country", "Language", "AdhocText") VALUES (?, ?, ?)', [studyId, "US", "en", adhoc]);
+        
         payload['metaData'].isConfigured = true;
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
