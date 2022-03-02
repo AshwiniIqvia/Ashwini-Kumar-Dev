@@ -7,7 +7,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Test Adhoc SMS Activity",
+           "name": "Custom SMS Activity",
            "description": "Send SMS with Journey Builder",
            "TwilioMessage":"test"
        }
