@@ -96,10 +96,10 @@ define([
        
         payload['arguments'].execute.inArguments = [{
             
-            // "adhoc": "{{Contact.Custom Activity.Test Active Data.AdhocText}}",
+            "adhoc": "{{Contact.Custom Activity.Test Active Data.AdhocText}}",
             "studyId": "{{Contact.Custom Activity.Test Active Data.Clinical Trial Protocol ID}}",
             "contactId": "{{Contact.Custom Activity.Test Active Data.Contact ID}}",
-            "adhoc": '{{adhoc.' + eventDefinitionKey + '.\"' + AdhocText + '\"}}'
+            //"adhoc": '{{adhoc.' + eventDefinitionKey + '.\"' + AdhocText + '\"}}'
 
            // 'serviceCloudId': '{{Event.' + eventDefinitionKey + '.\"' + idField + '\"}}'
 
